@@ -1,5 +1,6 @@
 ﻿using AnalysisDecoderBot.Models;
 using AnalysisDecoderBot.Services.Implementations;
+using AnalysisDecoderBot.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using SQLitePCL;
 
@@ -8,7 +9,7 @@ namespace AnalysisDecoderBot
     class Program
     {
         private static SqLiteRepository _sqLiteRepository;
-        private static TelegramMessenger _messenger;
+        private static ITelegramMessenger _messenger;
         private static ILogger _logger;
         private static UserStatusService _userStatusService;
         static async Task Main(string[] args)

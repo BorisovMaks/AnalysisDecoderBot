@@ -8,11 +8,11 @@ namespace AnalysisDecoderBot.Services.Implementations
     {
         public InlineKeyboardMarkup CreateInLineMainMenu(UserModel user, MenuInLineKeyboardMarkup menu, bool chatIsRunning)
         {
-            if (user.IsAdministrator) // Администратор
+            if (user.IsAdministrator)
             {
                 return CreateAdministratoMainMenu(menu, chatIsRunning);
             }
-            else // Зарегистрированный пользователь
+            else
             {
                 return CreateUserMainMenu(menu);
             }

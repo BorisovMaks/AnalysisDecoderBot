@@ -14,7 +14,7 @@ using Telegram.Bot.Types.Enums;
 
 namespace AnalysisDecoderBot.Services.Implementations
 {
-    public class TelegramMessenger
+    public class TelegramMessenger : ITelegramMessenger
     {
         private readonly ISqLiteRepository _repository;
         private readonly ITelegramBotClient _client;
@@ -980,7 +980,7 @@ namespace AnalysisDecoderBot.Services.Implementations
         private async Task SendStartMenu(ITelegramBotClient bot, Telegram.Bot.Types.Message message, UserModel user, CancellationToken ct)
         {
             var activeUserData = _userStatusService.GetActiveUserData(message.Chat.Id);
-            
+
             if (activeUserData == null)
             {
                 if (_userStatusService.TryAddActiveUser(message.Chat.Id, user, new MenuInLineKeyboardMarkup()))
@@ -1076,7 +1076,7 @@ namespace AnalysisDecoderBot.Services.Implementations
             else
             {
                 var ex = new Exception($"Попытка получения списка анализов незарегистрированным пользователем с Id чата {message.Chat.Id}");
-                _logger.LogError(nameof(CreateAnalysisMenu) ,ex);
+                _logger.LogError(nameof(CreateAnalysisMenu), ex);
                 throw ex;
             }
 
