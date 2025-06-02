@@ -1,4 +1,5 @@
 ﻿using AnalysisDecoderBot.Models;
+using AnalysisDecoderBot.Repositories;
 using AnalysisDecoderBot.Services.Implementations;
 using AnalysisDecoderBot.Services.Interfaces;
 using Microsoft.Extensions.Configuration;

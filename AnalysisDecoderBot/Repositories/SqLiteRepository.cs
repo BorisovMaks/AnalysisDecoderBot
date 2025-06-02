@@ -1,12 +1,10 @@
 ﻿using AnalysisDecoderBot.Enums;
 using AnalysisDecoderBot.Models;
-using AnalysisDecoderBot.Repositories;
-using AnalysisDecoderBot.Services.Interfaces;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 using Telegram.Bot.Types;
 
-namespace AnalysisDecoderBot.Services.Implementations
+namespace AnalysisDecoderBot.Repositories
 {
     public class SqLiteRepository : ISqLiteRepository, IDisposable
     {

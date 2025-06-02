@@ -1,7 +1,7 @@
 ﻿using AnalysisDecoderBot.Enums;
 using AnalysisDecoderBot.Models;
 
-namespace AnalysisDecoderBot.Services.Interfaces
+namespace AnalysisDecoderBot.Repositories
 {
     public interface ISqLiteRepository
     {
