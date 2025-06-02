@@ -8,10 +8,10 @@ namespace AnalysisDecoderBot
 {
     class Program
     {
-        private static SqLiteRepository _sqLiteRepository;
+        private static ISqLiteRepository _sqLiteRepository;
         private static ITelegramMessenger _messenger;
         private static ILogger _logger;
-        private static UserStatusService _userStatusService;
+        private static IUserStatusService _userStatusService;
         static async Task Main(string[] args)
         {
             _logger = new Logger();
